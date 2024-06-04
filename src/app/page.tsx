@@ -14,7 +14,7 @@ const fetchUser = async (path: string): Promise<User> => {
 };
 
 export default async function Home() {
-  const user = await fetchUser("http://localhost:8000/");
+  const user = await fetchUser("http://localhost:8088/");
 
-  return <p>{user.name}</p>
+  return <p>`{user.id}: {user.name}`</p>
 }
